@@ -1,0 +1,407 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Nubeero API",
+        "description": "",
+        "contact": {
+            "name": "Egbewatt kokou M.S",
+            "email": "ksupro1@gmail.com.com"
+        },
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/AutobaseMotorInsurance": {
+            "get": {
+                "summary": "Leadway Motor Insurance API",
+                "operationId": "App\\Http\\Controllers\\Leadway\\AutobaseMotorInsuranceController::post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "data": {
+                                                "$ref": "#/components/schemas/AutobaseMotorInsuranceResponse"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Normal Operational Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/ApiResponse"
+                                        },
+                                        {
+                                            "properties": {
+                                                "data": {
+                                                    "$ref": "#/components/schemas/AutobaseMotorInsuranceResponse"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/CreatePolicy4mQuotation": {
+            "get": {
+                "summary": "Leadway Policy Creation API",
+                "operationId": "App\\Http\\Controllers\\Leadway\\CreatePolicy4mQuotationController::post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "data": {
+                                                "$ref": "#/components/schemas/CreatePolicy4mQuotationResponse"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Normal Operational Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/ApiResponse"
+                                        },
+                                        {
+                                            "properties": {
+                                                "data": {
+                                                    "$ref": "#/components/schemas/CreatePolicy4mQuotationResponse"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/GetQuotation": {
+            "get": {
+                "summary": "Leadway Get Quotation API",
+                "operationId": "App\\Http\\Controllers\\Leadway\\GetQuotationController::post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "data": {
+                                                "$ref": "#/components/schemas/GetQuotationResponse"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Normal Operational Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/ApiResponse"
+                                        },
+                                        {
+                                            "properties": {
+                                                "data": {
+                                                    "$ref": "#/components/schemas/GetQuotationResponse"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/HealthInsurance": {
+            "get": {
+                "summary": "Leadway Health Insurance API",
+                "operationId": "App\\Http\\Controllers\\Leadway\\HealthInsuranceController::post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "data": {
+                                                "$ref": "#/components/schemas/HealthInsuranceResponse"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Normal Operational Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/ApiResponse"
+                                        },
+                                        {
+                                            "properties": {
+                                                "data": {
+                                                    "$ref": "#/components/schemas/HealthInsuranceResponse"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Pay4Quotation": {
+            "get": {
+                "summary": "Leadway Quotation Payment API",
+                "operationId": "App\\Http\\Controllers\\Leadway\\Pay4QuotationController::post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "data": {
+                                                "$ref": "#/components/schemas/Pay4QuotationResponse"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Normal Operational Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/ApiResponse"
+                                        },
+                                        {
+                                            "properties": {
+                                                "data": {
+                                                    "$ref": "#/components/schemas/Pay4QuotationResponse"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AutobaseMotorInsuranceRequest": {
+                "description": "Leadway Health Insurance request"
+            },
+            "CreatePolicy4mQuotationRequest": {
+                "description": "Leadway Health Insurance request"
+            },
+            "GetQuotationRequest": {
+                "description": "Leadway Health Insurance request"
+            },
+            "HealthInsuranceRequest": {
+                "description": "Leadway Health Insurance request"
+            },
+            "Pay4QuotationRequest": {
+                "description": "Leadway Health Insurance request"
+            },
+            "ApiResponse": {
+                "description": "Response entity, response result uses this structure uniformly",
+                "properties": {
+                    "code": {
+                        "description": "response code",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "response result prompt",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "AutobaseMotorInsuranceResponse": {
+                "description": "AutobaseMotor Insurance response",
+                "properties": {
+                    "totalPremium": {
+                        "description": "totalPremium",
+                        "type": "integer"
+                    },
+                    "PolicyNo": {
+                        "description": "PolicyNo",
+                        "type": "string"
+                    },
+                    "bankName": {
+                        "description": "bankName",
+                        "type": "string"
+                    },
+                    "certificateUrl": {
+                        "description": "certificateUrl",
+                        "type": "string"
+                    },
+                    "quoteNo": {
+                        "description": "quoteNo",
+                        "type": "string"
+                    },
+                    "vehicleResult": {
+                        "description": "vehicleResult",
+                        "type": "array",
+                        "items": {
+                            "type": "VehicleResult"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "CreatePolicy4mQuotationResponse": {
+                "description": "create policy from quotation response",
+                "properties": {
+                    "PolicyNo": {
+                        "description": "PolicyNo",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "message",
+                        "type": "string"
+                    },
+                    "paymentUrl": {
+                        "description": "paymentUrl",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "GetQuotationResponse": {
+                "description": "Get quotation response",
+                "properties": {
+                    "quoteNo": {
+                        "description": "quoteNo",
+                        "type": "string"
+                    },
+                    "totalPremium": {
+                        "description": "totalPremium",
+                        "type": "integer"
+                    },
+                    "vehicleResult": {
+                        "description": "vehicleResult",
+                        "type": "array",
+                        "items": {
+                            "type": "VehicleResult"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "HealthInsuranceResponse": {
+                "description": "Leadway Health Insurance response",
+                "properties": {
+                    "premium": {
+                        "description": "premium",
+                        "type": "integer"
+                    },
+                    "totalPremium": {
+                        "description": "totalPremium",
+                        "type": "integer"
+                    },
+                    "quoteNo": {
+                        "description": "quoteNo",
+                        "type": "string"
+                    },
+                    "bankName": {
+                        "description": "bankName",
+                        "type": "string"
+                    },
+                    "accountNo": {
+                        "description": "accountNo",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Pay4QuotationResponse": {
+                "description": "Pay for quotation response",
+                "properties": {
+                    "paymentUrl": {
+                        "description": "paymentUrl",
+                        "type": "string"
+                    },
+                    "paystackUrl": {
+                        "description": "paystackUrl",
+                        "type": "bool"
+                    },
+                    "PolicyNo": {
+                        "description": "PolicyNo",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "message",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}
