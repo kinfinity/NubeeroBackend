@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use  App\user;
+use  App\User;
 
 class AuthController extends Controller
 {
@@ -18,7 +18,7 @@ class AuthController extends Controller
     {
         
 
-        // try {
+        try {
             
             // var_dump($request);
             //validate incoming request 
@@ -28,23 +28,23 @@ class AuthController extends Controller
                 'password' => 'required',
             ]);
 
-            $user = new user();
-            // $user->name = $request->input('name');
-            // $user->email = $request->input('email');
-            // $plainPassword = $request->input('password');
-            // $user->password = app('hash')->make($plainPassword);
+            $user = new User();
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $plainPassword = $request->input('password');
+            $user->password = app('hash')->make($plainPassword);
             // var_dump($user);
 
             // $user->save();
 
             //return successful response
-            return response()->json(['user' => '$user', 'message' => 'CREATED'], 201);
+            return response()->json(['user' => $user, 'message' => 'CREATED'], 201);
 
-        // } catch (\Exception $e) {
-        //     //return error message
-        //     // return response()->json(['message' => 'User Registration Failed!'], 409);
-        //     return response()->json(['message' => $e->getMessage()], 409);
-        // }
+        } catch (\Exception $e) {
+            //return error message
+            // return response()->json(['message' => 'User Registration Failed!'], 409);
+            return response()->json(['message' => $e->getMessage()], 409);
+        }
 
     }
 
