@@ -25,7 +25,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('users/{id}', 'UserController@singleUser');
 
     // INSURANCE
-    $router->post('/healthinsurance', 'HealthinsuranceController@post');
+    $router->post('/healthinsurance', 'HealthInsuranceController@post');
     $router->post('/MotorInsurance', 'AutobaseMotorInsuranceController@post');
     $router->post('/GetQuotation', 'GetQuotationController@post');
     $router->post('/CreatePolicyfromQuotation', 'CreatePolicy4mQuotationController@post');

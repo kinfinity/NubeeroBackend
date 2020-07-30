@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Leadway;
+namespace App\Http\Controllers;
 
 use App\Http\Responses\HealthInsuranceResponse;
 use App\Http\Controllers\Leadway\Requests\HealthInsuranceRequest;
@@ -12,8 +12,9 @@ use OpenApi\Annotations\Property;
 use OpenApi\Annotations\RequestBody;
 use OpenApi\Annotations\Response;
 use OpenApi\Annotations\Schema;
+use Illuminate\Support\Facades\Log;
 
-class HealthInsuranceController extends Controller
+class HealthinsuranceController extends Controller
 {
 
     /**
@@ -57,11 +58,13 @@ class HealthInsuranceController extends Controller
      */
     public function post(Request $request)
     {
+        Log::info($request->JSON_string);
+        // var_dump($request->JSON_string);
+            
         try{
-            // var_dump($request->JSON_string);
             // return $request;
             // $response = new HealthInsuranceResponse();
-            return 'message';
+            return response()->json(['message' => '$e->getMessage()'], 409);
         } catch (\Exception $e) {
             //return error message
             // return response()->json(['message' => 'User Registration Failed!'], 409);
