@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Leadway;
+namespace App\Http\Controllers;
 
 use App\Http\Responses\GetQuotationResponse;
 use App\Http\Controllers\Leadway\Requests\GetQuotationRequest;

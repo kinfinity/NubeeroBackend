@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Leadway;
+namespace App\Http\Controllers;
 
 use App\Http\Responses\Pay4QuotationResponse;
 use App\Http\Controllers\Leadway\Requests\Pay4QuotationRequest;

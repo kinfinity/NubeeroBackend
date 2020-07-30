@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Leadway;
+namespace App\Http\Controllers;
 
 use App\Http\Responses\AutobaseMotorInsuranceResponse;
 use App\Http\Controllers\Leadway\Requests\AutobaseMotorInsuranceRequest;

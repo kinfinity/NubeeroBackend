@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Leadway;
+namespace App\Http\Controllers;
 
 use App\Http\Responses\CreatePolicy4mQuotationResponse;
 use App\Http\Controllers\Leadway\Requests\CreatePolicy4mQuotationRequest;
