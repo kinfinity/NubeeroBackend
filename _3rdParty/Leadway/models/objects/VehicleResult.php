@@ -1,6 +1,6 @@
 <?php
 
-    namespace _3rdParty\Core\Leadway\models\objects;
+    namespace _3rdParty\Leadway\models\objects;
 
     class VehicleResult
     {

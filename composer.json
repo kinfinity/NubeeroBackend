@@ -8,6 +8,7 @@
         "php": "^7.2.5",
         "darkaonline/swagger-lume": "7.*",
         "laravel/lumen-framework": "^7.0",
+        "php-curl-class/php-curl-class": "^8.8",
         "tymon/jwt-auth": "dev-develop"
     },
     "require-dev": {

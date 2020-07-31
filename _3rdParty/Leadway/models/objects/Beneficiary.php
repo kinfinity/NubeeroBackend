@@ -1,5 +1,7 @@
 <?php
 
+    namespace _3rdParty\Leadway\models\objects;
+
     class Beneficiary
     {
         public string $surname;

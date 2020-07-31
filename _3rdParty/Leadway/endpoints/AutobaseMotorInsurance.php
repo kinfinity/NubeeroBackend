@@ -1,9 +1,15 @@
 <?php
 
-    include_once("api/_3rdParty/Leadway/models/request/AutobaseMotorInsuranceRequest.php");
-    include_once("api/_3rdParty/Leadway/models/response/AutobaseMotorInsuranceResponse.php");
-    include_once("api/_3rdParty/Leadway/models/objects/VehicleResult.php");
-    include_once("api/_3rdParty/Core/client/CurlClient.php");
+    namespace _3rdParty\Leadway\endpoints;
+
+
+    use _3rdParty\Leadway\config\LeadwayInit;
+    use _3rdParty\Leadway\models\request\AutobaseMotorInsuranceRequest;
+    use _3rdParty\Leadway\models\response\AutobaseMotorInsuranceResponse;
+    use _3rdParty\Leadway\models\objects\VehicleResult;
+    use _3rdParty\Core\client\CurlClient;
+    use _3rdParty\Core\config\config;
+
     class AutobaseMotorInsurance
     {
         //
@@ -45,7 +51,7 @@
                 return $AutobaseMotorInsuranceResponse;
 
             }
-            catch (Exception $e) 
+            catch (\Exception $e) 
             {
                 //
                 echo 'Error LOG: '. $e->error_log;

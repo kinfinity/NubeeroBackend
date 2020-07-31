@@ -1,5 +1,8 @@
 <?php
 
+
+namespace _3rdParty\Core;
+
 class FacadeBase {
 
     private $_RefObject;

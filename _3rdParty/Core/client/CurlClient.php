@@ -1,5 +1,7 @@
 <?php
 
+    namespace _3rdParty\Core\client;
+
     require 'vendor/autoload.php'; 
     use Curl\Curl;
 
@@ -73,7 +75,7 @@
                 return $curl->response;
 
             }
-            catch (Exception $e) 
+            catch (\Exception $e) 
             {
                 //
                 echo 'Error LOG: '. $e->error_log;
@@ -152,7 +154,7 @@
                 return $response;
 
             }
-            catch (Exception $e) 
+            catch (\Exception $e) 
             {
                 //
                 echo 'Error LOG: '. $e->error_log;

@@ -1,8 +1,13 @@
 <?php
 
-    include_once("api/_3rdParty/Leadway/models/request/Pay4QuotationRequest.php");
-    include_once("api/_3rdParty/Leadway/models/response/Pay4QuotationResponse.php");
-    include_once("api/_3rdParty/Core/client/CurlClient.php");
+    namespace _3rdParty\Leadway\endpoints;
+
+    use _3rdParty\Leadway\config\LeadwayInit;
+    use _3rdParty\Leadway\models\request\Pay4QuotationRequest;
+    use _3rdParty\Leadway\models\response\Pay4QuotationResponse;
+    use _3rdParty\Core\client\CurlClient;
+    use _3rdParty\Core\config\config;
+
     class Pay4Quotation
     {
         //
@@ -32,7 +37,7 @@
                return $Pay4QuotationResponse;
 
             }
-            catch (Exception $e) 
+            catch (\Exception $e) 
             {
                 //
                 echo 'Error LOG: '. $e->error_log;

@@ -1,5 +1,8 @@
 <?php
 
+
+    namespace _3rdParty\Core\config;
+
     require 'vendor/autoload.php';
     use Dotenv\Dotenv;
 

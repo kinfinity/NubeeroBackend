@@ -1,9 +1,12 @@
 <?php
 
-    include("api/_3rdParty/Leadway/config/LeadwayInit.php");
-    include_once("api/_3rdParty/Leadway/models/request/ResetAuthRequest.php");
-    include_once("api/_3rdParty/Leadway/models/response/ResetAuthResponse.php");
-    include_once("api/_3rdParty/Core/client/CurlClient.php");
+    namespace _3rdParty\Leadway\endpoints;
+
+    use _3rdParty\Leadway\config\LeadwayInit;
+    use _3rdParty\Leadway\models\request\ResetAuthRequest;
+    use _3rdParty\Leadway\models\response\ResetAuthResponse;
+    use _3rdParty\Core\client\CurlClient;
+    use _3rdParty\Core\config\config;
     
     class ResetAuth
     {
@@ -28,7 +31,7 @@
                 $ResetAuthResponse->message = $response; // --fix
                 return $ResetAuthResponse;
             }
-            catch (Exception $e) 
+            catch (\Exception $e) 
             {
                 //
                 echo 'Error LOG: '. $e->error_log;

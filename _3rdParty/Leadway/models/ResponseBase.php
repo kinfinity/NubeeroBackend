@@ -1,5 +1,7 @@
 <?php
 
+    namespace _3rdParty\Leadway\models;
+
     class ResponseBase
     {
         public static string $errorMsg;

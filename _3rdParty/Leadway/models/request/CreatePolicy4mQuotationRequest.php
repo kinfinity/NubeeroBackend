@@ -1,5 +1,10 @@
 <?php
 
+    namespace _3rdParty\Leadway\models\request;
+
+    use _3rdParty\Leadway\models\objects\BankInfo;
+    use _3rdParty\Leadway\models\objects\Base64StringGroup;
+
     class CreatePolicy4mQuotationRequest
     {
         public string $quoteNo;

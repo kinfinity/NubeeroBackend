@@ -1,7 +1,9 @@
 <?php
 
-    include_once("api/_3rdParty/Core/config/config.php");
-    include_once("api/_3rdParty/Core/utils/ConfigException.php");
+    namespace _3rdParty\Leadway\config;
+
+    use _3rdParty\Core\utils\ConfigException;
+    use _3rdParty\Core\config\config;
 
 	class LeadwayInit{
         
@@ -48,7 +50,7 @@
                 }
 
             }
-            catch(Exception $e)
+            catch(\Exception $e)
             {
                 // echo 'Exception_Message: ' .$e->errorMessage();
             }

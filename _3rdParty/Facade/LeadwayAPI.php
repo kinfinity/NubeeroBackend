@@ -1,11 +1,19 @@
 <?php
 
-    include_once("api/_3rdParty/Leadway/endpoints/ResetAuth.php");
-    include_once("api/_3rdParty/Leadway/endpoints/GetQuotation.php");
-    include_once("api/_3rdParty/Leadway/endpoints/CreatePolicy4mQuotation.php");
-    include_once("api/_3rdParty/Leadway/endpoints/Pay4Quotation.php");
-    include_once("api/_3rdParty/Leadway/endpoints/HealthInsurance.php");
-    include_once("api/_3rdParty/Leadway/endpoints/AutobaseMotorInsurance.php");
+    namespace _3rdParty\Facade;
+
+    use _3rdParty\Leadway\endpoints\AutobaseMotorInsurance;
+    use _3rdParty\Leadway\models\request\AutobaseMotorInsuranceRequest;
+    use _3rdParty\Leadway\endpoints\CreatePolicy4mQuotation;
+    use _3rdParty\Leadway\models\request\CreatePolicy4mQuotationRequest;
+    use _3rdParty\Leadway\endpoints\GetQuotation;
+    use _3rdParty\Leadway\models\request\GetQuotationRequest;
+    use _3rdParty\Leadway\endpoints\HealthInsurance;
+    use _3rdParty\Leadway\models\request\HealthInsuranceRequest;
+    use _3rdParty\Leadway\endpoints\Pay4Quotation;
+    use _3rdParty\Leadway\models\request\Pay4QuotationRequest;
+
+    use _3rdParty\Core\config\config;
 
     class LeadwayAPI{
 
@@ -50,13 +58,13 @@
             $client = new Pay4Quotation(LeadwayAPI::$config);
             return $client->Request($pay4Quote_Req);
         }
-        public function ResetAuth(ResetAuthRequest $resetauth_Req)
-        {
+        // public function ResetAuth(ResetAuthRequest $resetauth_Req)
+        // {
             // DO NOT USE THIS ENDPOINT
             // $client = new ResetAuth(LeadwayAPI::$config);
             // $client->Request($resetauth_Req);
 
-        }
+        // }
 
     }
 
