@@ -20,25 +20,39 @@ use App\Http\Controllers\Controller;
 class HealthInsuranceRequest extends Controller
 {
 
+   public string $signature;
+   public string $productSubClass;
+   public string $productCode;
+   public $clientInfo;
+   public string $clientNo;
+   public $vehicle;
+   public ?string $building;
+   public ?string $staffs;
+
     public function __construct(Request $request)
    {
       $this->validate(
          $request, [
             'signature' => 'string',
-            'staffs' => 'string',
-            'building' => 'string',
-            'vehicle' => 'required|unique:Vehicle',
+            'staffs' => 'nullable',
+            'building' => 'nullable',
             'clientNo' => 'string',
-            'clientInfo' => 'unique:ClientInfo',
             'productCode' => 'string',
             'productSubClass' => 'string'
          ]
       );
 
-      $JSON_string = $request->json()->all();
-      // var_dump($request);
-      // $JSON_array = json_decode($data,true);
-   
+      $this->signature = $request->input('signature');
+      $this->staffs = $request->input('staffs');
+      $this->building = $request->input('building');
+      $this->clientNo = $request->input('clientNo');
+      $this->productCode = $request->input('productCode');
+      $this->productSubClass = $request->input('productSubClass');
+      $this->vehicle = $request->input('vehicle');
+      $this->clientInfo = $request->input('clientInfo');
+      // var_dump($this->clientInfo['surname']);
+      
+
       parent::__construct($request);
    }
 

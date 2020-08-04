@@ -20,20 +20,26 @@ use App\Http\Controllers\Controller;
 class GetQuotationRequest extends Controller
 {
 
+   public $clientInfo;
+   public string $clientNo;
+   public $vehicles = []; // Vehicle class type
+   public string $signature;
+
     public function __construct(Request $request)
    {
       $this->validate(
          $request, [
             'signature' => 'string',
-            'staffs' => 'string',
-            'building' => 'string',
             'vehicle' => 'required|unique:Vehicle',
             'clientNo' => 'string',
-            'clientInfo' => 'unique:ClientInfo',
-            'productCode' => 'string',
-            'productSubClass' => 'string'
+            'clientInfo' => 'unique:ClientInfo'
          ]
       );
+
+      $this->vehicle = $request->input('vehicle');
+      $this->clientNo = $request->input('clientNo');
+      $this->clientInfo = $request->input('clientInfo');
+      $this->signature = $request->input('signature');
 
       parent::__construct($request);
    }
